@@ -1,0 +1,2 @@
+include versioneer.py
+include pymt_permamodel/_version.py

@@ -1,0 +1,47 @@
+{% set data = load_setup_py_data() %}
+
+package:
+  name: "pymt_permamodel"
+  version: {{ data.get('version') }}
+
+source:
+  path: ..
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+  host:
+    - python
+    - pip
+    - cython
+    - numpy 1.11.*
+    - model_metadata
+    - permamodel 
+
+  run:
+    - python
+    - {{ pin_compatible('numpy') }}
+    - permamodel 
+
+test:
+  requires:
+    - bmi-tester
+    - model_metadata
+  imports:
+    - pymt_permamodel
+  commands:
+    - config_file=$(mmd-stage BmiKuMethod . > MANIFEST && mmd-query BmiKuMethod --var=run.config_file.path)
+    - bmi-test pymt_permamodel.bmi:BmiKuMethod --infile=$config_file --manifest=MANIFEST -v
+    - config_file=$(mmd-stage BmiFrostnumberMethod . > MANIFEST && mmd-query BmiFrostnumberMethod --var=run.config_file.path)
+    - bmi-test pymt_permamodel.bmi:BmiFrostnumberMethod --infile=$config_file --manifest=MANIFEST -v
+
+about:
+  summary: Python package that wraps the permamodel BMI.
+  home: https://github.com/mcflugen/pymt_permamodel
+  license: MIT license
+  license_file: LICENSE
+  dev_url: https://github.com/mcflugen/pymt_permamodel

@@ -1,0 +1,22 @@
+build:
+  define_macros: []
+  extra_compile_args: []
+  include_dirs: []
+  libraries: []
+  library_dirs: []
+  undef_macros: []
+info:
+  github_username: mcflugen
+  plugin_author: Eric Hutton
+  plugin_license: MIT
+  summary: PyMT plugins for Permamodel components
+library:
+  entry_point:
+  - Ku=permamodel.components.bmi_Ku_component:BmiKuMethod
+  - FrostNumber=permamodel.components.bmi_frost_number:BmiFrostnumberMethod
+  language: python
+  register: ''
+plugin:
+  name: permamodel
+  requirements:
+  - permamodel

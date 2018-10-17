@@ -1,0 +1,4 @@
+name: permamodel
+language: python
+package: permamodel
+class: Ku
