@@ -8,19 +8,7 @@ from setuptools import find_packages, setup
 
 from distutils.extension import Extension
 
-try:
-    import model_metadata
-except ImportError:
-
-    def get_cmdclass(*args, **kwds):
-        return kwds.get("cmdclass", None)
-
-    def get_entry_points(*args):
-        return None
-
-
-else:
-    from model_metadata.utils import get_cmdclass, get_entry_points
+from model_metadata.utils import get_cmdclass, get_entry_points
 
 
 packages = find_packages()
