@@ -1,2 +1,5 @@
 include versioneer.py
+include _version.py
 include pymt_permamodel/_version.py
+recursive-include pymt_permamodel/data/ *
+include LICENSE
