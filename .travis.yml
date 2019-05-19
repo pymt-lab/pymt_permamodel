@@ -39,9 +39,5 @@ install:
 script:
 - python setup.py develop
 - python -c 'import pymt_permamodel'
-- |
-  config_file=$(mmd-stage Ku . > MANIFEST && mmd-query Ku --var=run.config_file.path)
-  bmi-test pymt_permamodel.bmi:Ku --infile=$config_file --manifest=MANIFEST -v
-- |
-  config_file=$(mmd-stage FrostNumber . > MANIFEST && mmd-query FrostNumber --var=run.config_file.path)
-  bmi-test pymt_permamodel.bmi:FrostNumber --infile=$config_file --manifest=MANIFEST -v
+- bmi-test pymt_permamodel.bmi:Ku -vvv
+- bmi-test pymt_permamodel.bmi:FrostNumber -vvv
