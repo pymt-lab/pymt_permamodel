@@ -52,7 +52,7 @@ case_prefix:
 #       - string
 #     units: '-'
 T_air_min:
-  description: Scalar value
+  description: Mean month air temperature coldest month
   value:
     type: float
     default: -9.0
@@ -89,7 +89,7 @@ T_air_min_file:
 #       - string
 #     units: '-'
 T_air_max:
-  description: Scalar value
+  description: Mean month air temperature warmest month
   value:
     type: float
     default: 15.4
