@@ -4,30 +4,42 @@ pymt_permamodel
 
 
 .. image:: https://img.shields.io/badge/CSDMS-Basic%20Model%20Interface-green.svg
-        :target: https://bmi-forum.readthedocs.io/
+        :target: https://bmi.readthedocs.io/
         :alt: Basic Model Interface
 
 .. image:: https://img.shields.io/badge/recipe-pymt_permamodel-green.svg
         :target: https://anaconda.org/conda-forge/pymt_permamodel
 
-.. image:: https://img.shields.io/travis/mcflugen/pymt_permamodel.svg
-        :target: https://travis-ci.org/mcflugen/pymt_permamodel
-
-.. image:: https://readthedocs.org/projects/pymt_permamodel/badge/?version=latest
-        :target: https://pymt_permamodel.readthedocs.io/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/pymt-permamodel/badge/?version=latest
+        :target: https://pymt-permamodel.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
-.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
-        :target: https://github.com/csdms/pymt
-        :alt: Code style: black
+.. image:: https://github.com/pymt-lab/pymt_permamodel/actions/workflows/test.yml/badge.svg
+        :target: https://github.com/pymt-lab/pymt_permamodel/actions/workflows/test.yml
+
+.. image:: https://github.com/pymt-lab/pymt_permamodel/actions/workflows/flake8.yml/badge.svg
+        :target: https://github.com/pymt-lab/pymt_permamodel/actions/workflows/flake8.yml
+
+.. image:: https://github.com/pymt-lab/pymt_permamodel/actions/workflows/black.yml/badge.svg
+        :target: https://github.com/pymt-lab/pymt_permamodel/actions/workflows/black.yml
 
 
 PyMT plugins for Permamodel components
 
 
-* Free software: MIT license
-* Documentation: https://permamodel.readthedocs.io.
+* Free software: MIT License
+* Documentation: https://pymt-permamodel.readthedocs.io.
 
+
+
+
+=========== =====================================
+Component   PyMT
+=========== =====================================
+FrostNumber `from pymt.models import FrostNumber`
+Ku          `from pymt.models import Ku`
+KuEnhanced  `from pymt.models import KuEnhanced`
+=========== =====================================
 
 ---------------
 Installing pymt
@@ -45,7 +57,7 @@ into which to install it. This can be done with,
 
 .. code::
 
-  conda create -n pymt python=3.6
+  conda create -n pymt python=3
   conda activate pymt
 
 Once the `conda-forge` channel has been enabled, `pymt` can be installed with:

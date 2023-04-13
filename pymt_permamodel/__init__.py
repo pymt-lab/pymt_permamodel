@@ -1,5 +1,13 @@
 #! /usr/bin/env python
+import pkg_resources
 
-from .bmi import Ku, FrostNumber
+__version__ = pkg_resources.get_distribution("pymt_permamodel").version
 
-__all__ = ["Ku", "FrostNumber"]
+
+from .bmi import FrostNumber, Ku, KuEnhanced
+
+__all__ = [
+    "FrostNumber",
+    "Ku",
+    "KuEnhanced",
+]
