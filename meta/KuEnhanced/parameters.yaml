@@ -10,12 +10,12 @@ inputs_dir:
   description: Directory with input data files
   value:
     type: string
-    default: "."
+    default: ""
 outputs_dir:
   description: Directory with model output files
   value:
     type: string
-    default: "."
+    default: ""
 
 # Domain
 run_duration:
