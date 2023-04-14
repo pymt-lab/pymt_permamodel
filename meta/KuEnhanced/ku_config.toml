@@ -1,8 +1,8 @@
-experiment = {{ experiment }}
+experiment = "{{ experiment }}"
 
 [directories]
-inputs_dir = {{ inputs_dir }}
-outputs_dir = {{ outputs_dir }}
+inputs_dir = "{{ inputs_dir }}"
+outputs_dir = "{{ outputs_dir }}"
 
 [domain]
 number_of_years = {{ run_duration }} # time
