@@ -58,16 +58,15 @@ pretty:
 	black setup.py pymt_permamodel
 
 test: ## run tests quickly with the default Python
-	config_file=$(mmd-stage BmiKuMethod . > MANIFEST && mmd-query BmiKuMethod --var=run.config_file.path)
-	bmi-test pymt_permamodel.bmi:BmiKuMethod --infile=$config_file --manifest=MANIFEST -v
-	config_file=$(mmd-stage BmiFrostnumberMethod . > MANIFEST && mmd-query BmiFrostnumberMethod --var=run.config_file.path)
-	bmi-test pymt_permamodel.bmi:BmiFrostnumberMethod --infile=$config_file --manifest=MANIFEST -v
+	bmi-test pymt_permamodel.bmi:FrostNumber -vvv
+	bmi-test pymt_permamodel.bmi:Ku -vvv
+	bmi-test pymt_permamodel.bmi:KuEnhanced -vvv
 
 test-all: ## run tests on every Python version with tox
 	tox
 
 coverage: ## check code coverage quickly with the default Python
-	coverage run --source permamodel -m pytest
+	coverage run --source pymt_permamodel -m pytest
 	coverage report -m
 	coverage html
 	$(BROWSER) htmlcov/index.html
@@ -92,4 +91,4 @@ dist: clean ## builds source and wheel package
 	ls -l dist
 
 install: clean ## install the package to the active Python's site-packages
-	python setup.py develop
+	pip install -e .

@@ -21,7 +21,6 @@ requirements:
     - numpy 1.11.*
     - model_metadata
     - permamodel 
-
   run:
     - python
     - {{ pin_compatible('numpy') }}
@@ -34,14 +33,16 @@ test:
   imports:
     - pymt_permamodel
   commands:
-    - config_file=$(mmd-stage BmiKuMethod . > MANIFEST && mmd-query BmiKuMethod --var=run.config_file.path)
-    - bmi-test pymt_permamodel.bmi:BmiKuMethod --infile=$config_file --manifest=MANIFEST -v
-    - config_file=$(mmd-stage BmiFrostnumberMethod . > MANIFEST && mmd-query BmiFrostnumberMethod --var=run.config_file.path)
-    - bmi-test pymt_permamodel.bmi:BmiFrostnumberMethod --infile=$config_file --manifest=MANIFEST -v
+    - config_file=$(mmd-stage FrostNumber . > MANIFEST && mmd-query FrostNumber --var=run.config_file.path)
+    - bmi-test pymt_permamodel.bmi:FrostNumber --config-file=$config_file --manifest=MANIFEST -v
+    - config_file=$(mmd-stage Ku . > MANIFEST && mmd-query Ku --var=run.config_file.path)
+    - bmi-test pymt_permamodel.bmi:Ku --config-file=$config_file --manifest=MANIFEST -v
+    - config_file=$(mmd-stage KuEnhanced . > MANIFEST && mmd-query KuEnhanced --var=run.config_file.path)
+    - bmi-test pymt_permamodel.bmi:KuEnhanced --config-file=$config_file --manifest=MANIFEST -v
 
 about:
   summary: Python package that wraps the permamodel BMI.
-  home: https://github.com/mcflugen/pymt_permamodel
-  license: MIT license
+  home: https://github.com/pymt-lab/pymt_permamodel
+  license: MIT License
   license_file: LICENSE
-  dev_url: https://github.com/mcflugen/pymt_permamodel
+  dev_url: https://github.com/pymt-lab/pymt_permamodel

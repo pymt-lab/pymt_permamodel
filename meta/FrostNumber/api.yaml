@@ -1,4 +1,4 @@
-name: permamodel
+name: pymt_permamodel
 language: python
-package: permamodel
+package: pymt_permamodel
 class: FrostNumber
