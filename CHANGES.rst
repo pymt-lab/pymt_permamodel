@@ -1,10 +1,10 @@
 Changelog for pymt_permamodel
 =============================
 
-0.2.0 (unreleased)
+0.2.0 (2023-04-21)
 -------------------
 
-- Update for babelizer 0.3.9 and permamodel 0.2
+- Update for babelizer 0.3.9 and permamodel 0.2 (#2)
 
 
 0.1.3 (2019-05-21)
