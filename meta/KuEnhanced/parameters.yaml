@@ -46,6 +46,71 @@ nx:
       max: 1000000
     units: 1
 
+# Variables: air temperature
+air_temperature_file:
+  description: Air temperature (from file)
+  value:
+    type: string
+    default: "air_temperature.nc"
+air_temperature_scalar:
+  description: Air temperature (scalar value)
+  value:
+    type: long
+    default: -999
+    range:
+      min: -999
+      max: 100000
+    units: K
+
+# Variables: temperature amplitude
+temperature_amplitude_file:
+  description: Temperature amplitude (from file)
+  value:
+    type: string
+    default: "temperature_amplitude.nc"
+temperature_amplitude_scalar:
+  description: Temperature amplitude (scalar value)
+  value:
+    type: long
+    default: -999
+    range:
+      min: -999
+      max: 100000
+    units: K
+
+# Variables: snow thickness
+snow_thickness_file:
+  description: Snow thickness (from file)
+  value:
+    type: string
+    default: "snow_thickness.nc"
+snow_thickness_scalar:
+  description: Snow thickness (scalar value)
+  value:
+    type: long
+    default: -999
+    range:
+      min: -999
+      max: 100000
+    units: m
+
+# Variables: snow density
+snow_density_file:
+  description: Snow density (from file)
+  value:
+    type: string
+    default: "snow_density.nc"
+snow_density_scalar:
+  description: Snow density (scalar value)
+  value:
+    type: float
+    default: 240.0
+    range:
+      min: -999.0
+      max: 10000.0
+    units: kg m-3
+
+
 # Soils (sand)
 soils_sand_scalar_fraction:
   description: Soils (sand) scalar fraction
