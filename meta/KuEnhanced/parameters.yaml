@@ -110,6 +110,85 @@ snow_density_scalar:
       max: 10000.0
     units: kg m-3
 
+# Variables: soil water content
+soil_water_content_file:
+  description: Soil water content (from file)
+  value:
+    type: string
+    default: "soil_water_content.nc"
+soil_water_content_scalar:
+  description: Soil water content (scalar value)
+  value:
+    type: long
+    default: -999
+    range:
+      min: -999
+      max: 100000
+    units: L m-3
+
+# Variables: frozen vegetation height
+frozen_vegetation_height_file:
+  description: Frozen vegetation height (from file)
+  value:
+    type: string
+    default: "frozen_vegetation_height.nc"
+frozen_vegetation_height_scalar:
+  description: Frozen vegetation height (scalar value)
+  value:
+    type: float
+    default: 0.1
+    range:
+      min: -999.0
+      max: 10000.0
+    units: m
+
+# Variables: thawed vegetation height
+thawed_vegetation_height_file:
+  description: Thawed vegetation height (from file)
+  value:
+    type: string
+    default: "thawed_vegetation_height.nc"
+thawed_vegetation_height_scalar:
+  description: Thawed vegetation height (scalar value)
+  value:
+    type: float
+    default: 0.1
+    range:
+      min: -999.0
+      max: 10000.0
+    units: m
+
+# Variables: frozen vegetation diffusivity
+frozen_vegetation_diffusivity_file:
+  description: Frozen vegetation diffusivity (from file)
+  value:
+    type: string
+    default: "frozen_vegetation_diffusivity.nc"
+frozen_vegetation_diffusivity_scalar:
+  description: Frozen vegetation diffusivity (scalar value)
+  value:
+    type: float
+    default: 2.39e-6
+    range:
+      min: 0.0
+      max: 1.0
+    units: m2 s-1
+
+# Variables: thawed vegetation diffusivity
+thawed_vegetation_diffusivity_file:
+  description: Thawed vegetation diffusivity (from file)
+  value:
+    type: string
+    default: "thawed_vegetation_diffusivity.nc"
+thawed_vegetation_diffusivity_scalar:
+  description: Thawed vegetation diffusivity (scalar value)
+  value:
+    type: float
+    default: 1.0556e-6
+    range:
+      min: 0.0
+      max: 1.0
+    units: m2 s-1
 
 # Soils (sand)
 soils_sand_scalar_fraction:

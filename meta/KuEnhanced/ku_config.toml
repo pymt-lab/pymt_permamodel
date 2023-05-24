@@ -8,13 +8,6 @@ outputs_dir = "{{ outputs_dir }}"
 number_of_years = {{ run_duration }} # time
 grid_shape = [{{ ny }}, {{ nx }}] # [y, x]
 
-[files]
-soil_water_content_file = "soil_water_content.nc"
-frozen_vegetation_height_file = "frozen_vegetation_height.nc"
-thawed_vegetation_height_file = "thawed_vegetation_height.nc"
-frozen_vegetation_diffusivity_file = "frozen_vegetation_diffusivity.nc"
-thawed_vegetation_diffusivity_file = "thawed_vegetation_diffusivity.nc"
-
 [variables.air_temperature]
 nc_file = {{ air_temperature_file }}
 scalar = {{ air_temperature_scalar }}
@@ -32,24 +25,24 @@ nc_file = {{ snow_density_file }}
 scalar = {{ snow_density_scalar }}
 
 [variables.soil_water_content]
-nc_file = 'soil_water_content.nc'
-scalar = -999
+nc_file = {{ soil_water_content_file }}
+scalar = {{ soil_water_content_scalar }}
 
 [variables.frozen_vegetation_height]
-nc_file = ''
-scalar = 0.1
+nc_file = {{ frozen_vegetation_height_file }}
+scalar = {{ frozen_vegetation_height_scalar }}
 
 [variables.thawed_vegetation_height]
-nc_file = ''
-scalar = 0.1
+nc_file = {{ thawed_vegetation_height_file }}
+scalar = {{ thawed_vegetation_height_scalar }}
 
 [variables.frozen_vegetation_diffusivity]
-nc_file = ''
-scalar = 2.39e-6
+nc_file = {{ frozen_vegetation_diffusivity_file }}
+scalar = {{ frozen_vegetation_diffusivity_scalar }}
 
 [variables.thawed_vegetation_diffusivity]
-nc_file = ''
-scalar = 1.0556e-6
+nc_file = {{ thawed_vegetation_diffusivity_file }}
+scalar = {{ thawed_vegetation_diffusivity_scalar }}
 
 [soils.sand]
 scalar_fraction = {{ soils_sand_scalar_fraction }}
