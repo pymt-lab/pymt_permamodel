@@ -56,10 +56,10 @@ air_temperature_scalar:
   description: Air temperature (scalar value)
   value:
     type: long
-    default: -999
+    default: 0
     range:
-      min: -999
-      max: 100000
+      min: 0
+      max: 10000
     units: K
 
 # Variables: temperature amplitude
@@ -72,10 +72,10 @@ temperature_amplitude_scalar:
   description: Temperature amplitude (scalar value)
   value:
     type: long
-    default: -999
+    default: 0
     range:
-      min: -999
-      max: 100000
+      min: 0
+      max: 10000
     units: K
 
 # Variables: snow thickness
@@ -88,10 +88,10 @@ snow_thickness_scalar:
   description: Snow thickness (scalar value)
   value:
     type: long
-    default: -999
+    default: 0
     range:
-      min: -999
-      max: 100000
+      min: 0
+      max: 10000
     units: m
 
 # Variables: snow density
@@ -106,7 +106,7 @@ snow_density_scalar:
     type: float
     default: 240.0
     range:
-      min: -999.0
+      min: 0.0
       max: 10000.0
     units: kg m-3
 
@@ -120,10 +120,10 @@ soil_water_content_scalar:
   description: Soil water content (scalar value)
   value:
     type: long
-    default: -999
+    default: 0
     range:
-      min: -999
-      max: 100000
+      min: 0
+      max: 1000
     units: L m-3
 
 # Variables: frozen vegetation height
@@ -138,8 +138,8 @@ frozen_vegetation_height_scalar:
     type: float
     default: 0.1
     range:
-      min: -999.0
-      max: 10000.0
+      min: 0.0
+      max: 1000.0
     units: m
 
 # Variables: thawed vegetation height
@@ -154,8 +154,8 @@ thawed_vegetation_height_scalar:
     type: float
     default: 0.1
     range:
-      min: -999.0
-      max: 10000.0
+      min: 0.0
+      max: 1000.0
     units: m
 
 # Variables: frozen vegetation diffusivity
