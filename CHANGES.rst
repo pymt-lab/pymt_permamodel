@@ -1,7 +1,7 @@
 Changelog for pymt_permamodel
 =============================
 
-0.2.2 (unreleased)
+0.2.2 (2024-10-23)
 ------------------
 
 - Updates for pymt v1.3.2 (#5) 
