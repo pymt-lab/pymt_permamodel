@@ -1,6 +1,18 @@
 Changelog for pymt_permamodel
 =============================
 
+0.2.2 (unreleased)
+------------------
+
+- Updates for pymt v1.3.2 (#5) 
+
+
+0.2.1 (2023-05-25)
+------------------
+
+- Update KuEnhanced config file template (#4)  
+
+
 0.2.0 (2023-04-21)
 -------------------
 
