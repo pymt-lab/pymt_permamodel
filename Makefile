@@ -58,9 +58,9 @@ pretty:
 	black setup.py pymt_permamodel
 
 test: ## run tests quickly with the default Python
-	bmi-test pymt_permamodel.bmi:FrostNumber -vvv
-	bmi-test pymt_permamodel.bmi:Ku -vvv
-	bmi-test pymt_permamodel.bmi:KuEnhanced -vvv
+	bmi-test pymt_permamodel.bmi:FrostNumber --config-file=${PWD}/examples/Frostnumber_example_singlesite_singleyear.cfg --root-dir=examples -vvv
+	bmi-test pymt_permamodel.bmi:Ku --config-file=${PWD}/examples/Ku_method.cfg --root-dir=examples -vvv
+	bmi-test pymt_permamodel.bmi:KuEnhanced --config-file=${PWD}/examples/Ku_bmi_example_config.toml --root-dir=examples -vvv
 
 test-all: ## run tests on every Python version with tox
 	tox
