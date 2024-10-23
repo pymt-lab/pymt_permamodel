@@ -44,7 +44,18 @@ jobs:
         run: |
           pip install -e .
 
-      - name: Test
+      - name: Test import
         run: |
           python -c 'import pymt_permamodel'
-          make test
+
+      - name: Test FrostNumber
+        run: |
+          make test-frostnumber
+
+      - name: Test Ku
+        run: |
+          make test-ku
+
+      - name: Test KuEnhanced
+        run: |
+          make test-kuenhanced
