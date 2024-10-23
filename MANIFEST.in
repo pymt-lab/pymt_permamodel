@@ -9,6 +9,9 @@ recursive-include pymt_permamodel *.pyx
 recursive-include docs *.py
 recursive-include docs *.rst
 recursive-include docs Makefile
+recursive-include examples *.nc
+recursive-include examples *.cfg
+recursive-include examples *.toml
 recursive-exclude meta *
 recursive-exclude recipe *
 recursive-exclude pymt_permamodel *.cpp
