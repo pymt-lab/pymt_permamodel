@@ -137,4 +137,3 @@ fn_out_filename:
   value:
     type: string
     default: frostnumber_output.dat
-    units: '-'
