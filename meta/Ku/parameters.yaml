@@ -70,7 +70,7 @@ T_air_file:
   value:
     type: file
     default: 'off'
-    files:
+    choices:
       - 'T_air.txt'
       - 'off'
 
@@ -88,7 +88,7 @@ A_air_file:
   value:
     type: file
     default: 'off'
-    files:
+    choices:
       - 'A_air.txt'
       - 'off'
 
@@ -106,7 +106,7 @@ h_snow_file:
   value:
     type: file
     default: 'off'
-    files:
+    choices:
       - 'h_snow.txt'
       - 'off'
 
@@ -124,7 +124,7 @@ rho_snow_file:
   value:
     type: file
     default: 'off'
-    files:
+    choices:
       - 'rho_snow.txt'
       - 'off'
 
@@ -142,7 +142,7 @@ vwc_H2O_file:
   value:
     type: file
     default: 'off'
-    files:
+    choices:
       - 'vwc.txt'
       - 'off'
 
@@ -160,7 +160,7 @@ Hvgf_file:
   value:
     type: file
     default: 'off'
-    files:
+    choices:
       - 'hvgf.txt'
       - 'off'
 
@@ -178,7 +178,7 @@ Hvgt_file:
   value:
     type: file
     default: 'off'
-    files:
+    choices:
       - 'hvgt.txt'
       - 'off'
 
@@ -196,7 +196,7 @@ Dvf_file:
   value:
     type: file
     default: 'off'
-    files:
+    choices:
       - 'dvf.txt'
       - 'off'
 
@@ -214,7 +214,7 @@ Dvt_file:
   value:
     type: file
     default: 'off'
-    files:
+    choices:
       - 'dvt.txt'
       - 'off'
 

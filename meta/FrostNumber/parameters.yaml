@@ -65,7 +65,7 @@ T_air_min_file:
   value:
     type: file
     default: 'off'
-    files:
+    choices:
       - 'fn_t_air_min.dat'
       - 'off'
 # T_air_max_ptype:
@@ -102,7 +102,7 @@ T_air_max_file:
   value:
     type: file
     default: 'off'
-    files:
+    choices:
       - 'fn_t_air_max.dat'
       - 'off'
 start_year:
@@ -137,4 +137,3 @@ fn_out_filename:
   value:
     type: string
     default: frostnumber_output.dat
-    units: '-'
