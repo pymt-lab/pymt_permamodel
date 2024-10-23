@@ -53,6 +53,4 @@ jobs:
       - name: Test
         run: |
           python -c 'import pymt_permamodel'
-          bmi-test pymt_permamodel.bmi:FrostNumber -vvv
-          bmi-test pymt_permamodel.bmi:Ku -vvv
-          bmi-test pymt_permamodel.bmi:KuEnhanced -vvv
+          make test
