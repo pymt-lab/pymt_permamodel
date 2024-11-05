@@ -1,7 +1,7 @@
 Changelog for pymt_permamodel
 =============================
 
-0.2.3 (unreleased)
+0.2.3 (2024-11-05)
 ------------------
 
 - Replace use of pkg_resources with importlib (#6)
