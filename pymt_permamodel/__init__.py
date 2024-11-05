@@ -1,7 +1,7 @@
 #! /usr/bin/env python
-import pkg_resources
+from importlib.metadata import version
 
-__version__ = pkg_resources.get_distribution("pymt_permamodel").version
+__version__ = version("pymt_permamodel")
 
 
 from .bmi import FrostNumber, Ku, KuEnhanced
