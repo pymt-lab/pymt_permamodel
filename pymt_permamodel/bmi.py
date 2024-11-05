@@ -1,7 +1,6 @@
 from __future__ import absolute_import
 
 import sys
-import importlib
 import pathlib
 
 from permamodel.components.bmi_frost_number import BmiFrostnumberMethod as FrostNumber
