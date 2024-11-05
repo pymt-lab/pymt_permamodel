@@ -1,7 +1,7 @@
 from __future__ import absolute_import
 
-import sys
 import pathlib
+import sys
 
 from permamodel.components.bmi_frost_number import BmiFrostnumberMethod as FrostNumber
 from permamodel.components.bmi_Ku import BmiKuModel as KuEnhanced
@@ -18,9 +18,7 @@ FrostNumber.METADATA = pathlib.Path(
 )
 
 Ku.__name__ = "Ku"
-Ku.METADATA = pathlib.Path(
-    importlib_resources.files(__name__) / "data" / Ku.__name__
-)
+Ku.METADATA = pathlib.Path(importlib_resources.files(__name__) / "data" / Ku.__name__)
 
 KuEnhanced.__name__ = "KuEnhanced"
 KuEnhanced.METADATA = pathlib.Path(
